@@ -1,8 +1,12 @@
 <div class="px-10">
   <!-- head -->
   <div class="flex justify-between w-full items-center text-center py-6">
-    <!-- balank div -->
-    <div></div>
+    <!-- icon -->
+
+    <div class="flex items-center space-x-8">
+      <i class="fa-3x fa fa-handshake-o" aria-hidden="true"></i>
+    </div>
+
     <!-- Search -->
     <div>
       <form class="flex items-center">
@@ -40,7 +44,7 @@
   </div>
   <!-- main -->
   <div
-    class="border-b-2 border-slate-600 pb-4 justify-center xl:justify-center grid md:grid-cols-5 gap-4 sm:grid-cols-1"
+    class="border-b border-slate-600 pb-4 justify-center xl:justify-center grid md:grid-cols-5 gap-4 sm:grid-cols-1"
   >
     <div class="hover:text-white" *ngFor="let item of productItem">
       <mat-card
@@ -85,7 +89,7 @@
     >
       <div
         *ngFor="let item of deltail"
-        class="border max-w-sm bg-white rounded-lg dark:bg-gray-800 dark:border-gray-700"
+        class="border bg-white rounded-lg dark:bg-gray-800 dark:border-gray-700"
       >
         <a href="#">
           <img src="{{ item.imagesUrl }}" alt="product image" />
