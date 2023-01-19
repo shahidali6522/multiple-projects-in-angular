@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CalculaterModule } from './calculater/calculater.module';
+import { ShopModule } from './shop/shop.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,6 +15,7 @@ import { CalculaterModule } from './calculater/calculater.module';
     BrowserAnimationsModule,
     MatButtonModule,
     CalculaterModule,
+    ShopModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
