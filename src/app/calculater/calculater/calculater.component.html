@@ -1,0 +1,234 @@
+<div class="h-full bg-gray-900 w-full">
+  <!-- Header -->
+  <div class="flex justify-center bg-black">
+    <p
+      class="items-center text-slate-50 text-3xl hover:text-gray-400 py-4 w-52"
+    >
+      CALCULATER
+    </p>
+  </div>
+  <!-- main -->
+  <div class="flex justify-center py-4 w-full bg-gray-100">
+    <div class="items-center bg-gray-100">
+      <!-- input flied -->
+      <input
+        #box
+        (keyup.enter)="calcvalue(box.value)"
+        [(ngModel)]="toshow"
+        class="h-10 w-80 text-right px-4 border rounded-xl border-solid border-slate-300"
+        type="text"
+      />
+      <div class="flex justify-center items-center pt-2 w-full">
+        <!-- powerbuy -->
+        <p>Powerbuy Shahid Ali</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- C / + back -->
+  <div class="flex justify-center space-x-8 py-4 w-full example-button-row">
+    <!-- C -->
+    <div>
+      <button
+        (click)="clear()"
+        mat-button
+        class="bg-zinc-900 text-red-400 text-4xl h-12 hover:text-gray-200"
+      >
+        C
+      </button>
+    </div>
+    <!-- back -->
+    <div>
+      <button
+        (click)="back()"
+        mat-button
+        class="bg-zinc-900 text-red-400 text-4xl h-12 hover:text-gray-200"
+      >
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+      </button>
+    </div>
+    <!-- / -->
+    <div>
+      <button
+        (click)="writetoinput('/')"
+        mat-button
+        class="bg-zinc-900 text-red-400 text-4xl h-12 hover:text-gray-200"
+      >
+        /
+      </button>
+    </div>
+    <!-- + -->
+    <div>
+      <button
+        (click)="writetoinput('+')"
+        mat-button
+        class="bg-zinc-900 text-red-400 text-4xl h-12 hover:text-gray-200"
+      >
+        +
+      </button>
+    </div>
+  </div>
+  <!-- 7 8 9  -->
+  <div class="flex justify-center space-x-8 pb-4 w-full example-button-row">
+    <!-- 7 -->
+    <div>
+      <button
+        (click)="writetoinput('7')"
+        mat-button
+        class="bg-zinc-900 text-sky-400 text-4xl h-12 hover:text-gray-200"
+      >
+        7
+      </button>
+    </div>
+    <!-- 8 -->
+    <div>
+      <button
+        (click)="writetoinput('8')"
+        mat-button
+        class="bg-zinc-900 text-sky-400 text-4xl h-12 hover:text-gray-200"
+      >
+        8
+      </button>
+    </div>
+    <!-- 9 -->
+    <div>
+      <button
+        (click)="writetoinput('9')"
+        mat-button
+        class="bg-zinc-900 text-sky-400 text-4xl h-12 hover:text-gray-200"
+      >
+        9
+      </button>
+    </div>
+    <!-- x -->
+    <div>
+      <button
+        (click)="writetoinput('x')"
+        mat-button
+        class="bg-zinc-900 rounded-lg text-red-400 text-4xl h-12 hover:text-gray-200"
+      >
+        x
+      </button>
+    </div>
+  </div>
+  <!--  4 5 6 - -->
+  <div class="flex justify-center space-x-8 pb-4 w-full example-button-row">
+    <!-- 4 -->
+    <div>
+      <button
+        (click)="writetoinput('4')"
+        mat-button
+        class="bg-zinc-900 text-sky-400 text-4xl h-12 hover:text-gray-200"
+      >
+        4
+      </button>
+    </div>
+    <!-- 5 -->
+    <div>
+      <button
+        (click)="writetoinput('5')"
+        mat-button
+        class="bg-zinc-900 text-sky-400 text-4xl h-12 hover:text-gray-200"
+      >
+        5
+      </button>
+    </div>
+    <!-- 6 -->
+    <div>
+      <button
+        (click)="writetoinput('6')"
+        mat-button
+        class="bg-zinc-900 text-sky-400 h-12 text-4xl hover:text-gray-200"
+      >
+        6
+      </button>
+    </div>
+    <!-- - -->
+    <div class="rounded-lg">
+      <button
+        (click)="writetoinput('-')"
+        mat-button
+        class="bg-zinc-900 rounded-lg text-red-400 h-12 text-4xl hover:text-gray-200"
+      >
+        -
+      </button>
+    </div>
+  </div>
+  <!-- 1 2 3 + -->
+  <div class="flex justify-center space-x-8 pb-4 w-full example-button-row">
+    <!-- 1 -->
+    <div>
+      <button
+        (click)="writetoinput('1')"
+        mat-button
+        class="bg-zinc-900 text-sky-400 h-12 text-4xl hover:text-gray-200"
+      >
+        1
+      </button>
+    </div>
+    <!-- 2 -->
+    <div>
+      <button
+        (click)="writetoinput('2')"
+        mat-button
+        class="bg-zinc-900 text-sky-400 h-12 text-4xl hover:text-gray-200"
+      >
+        2
+      </button>
+    </div>
+    <!-- 3 -->
+    <div>
+      <button
+        (click)="writetoinput('3')"
+        mat-button
+        class="bg-zinc-900 text-sky-400 h-12 text-4xl hover:text-gray-200"
+      >
+        3
+      </button>
+    </div>
+    <!-- + -->
+    <div>
+      <button
+        (click)="writetoinput('+')"
+        mat-button
+        class="bg-zinc-900 rounded-lg text-red-400 h-12 text-4xl hover:text-gray-200"
+      >
+        +
+      </button>
+    </div>
+  </div>
+
+  <!-- 0 . = -->
+  <div class="flex justify-center space-x-8 pb-4 w-full example-button-row">
+    <!-- 0 -->
+    <div>
+      <button
+        (click)="writetoinput('0')"
+        mat-button
+        class="bg-zinc-900 h-16 w-40 text-sky-400 text-4xl hover:text-gray-200"
+      >
+        0
+      </button>
+    </div>
+    <!-- . -->
+    <div>
+      <button
+        (click)="writetoinput('.')"
+        mat-button
+        class="bg-zinc-900 h-16 text-sky-400 text-4xl hover:text-gray-200"
+      >
+        .
+      </button>
+    </div>
+    <!-- = -->
+    <div class="">
+      <button
+        (click)="eqals()"
+        mat-button
+        class="bg-zinc-900 h-16 text-red-400 text-4xl hover:text-gray-200"
+      >
+        =
+      </button>
+    </div>
+  </div>
+</div>
