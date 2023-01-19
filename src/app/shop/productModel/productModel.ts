@@ -1,5 +1,12 @@
-export interface productModel {
+export interface listModel {
   name: string;
   image: string;
-  value: number;
+}
+export interface detaliModel {
+  id: number;
+  description: string;
+  imagesUrl: string;
+  sellingPrice: number;
+  listingPrice: number;
+  country: string;
 }
